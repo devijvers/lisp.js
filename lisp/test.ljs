@@ -24,3 +24,4 @@
 (assert (= (.toLowerCase (.toUpperCase "test")) "test"))
 (assert ((:startsWith (.toLowerCase (.toUpperCase "test"))) "t"))
 (assert (= 4 (:length "test")))
+(assert (= "AstSymbol" (.getClassName (.first '(println "test")))))

@@ -15,6 +15,9 @@ AstSymbol = new JS.Class({
 	},
 	toString: function() {
 	    return this._name;
+	},
+	getClassName: function() {
+	    return "AstSymbol";
 	}
     });
 
@@ -42,6 +45,9 @@ AstKeyword = new JS.Class({
 		var fn = o[this_name];
 		return (typeof(fn) == "function" ? fn.apply(o, arguments) : fn);
 	    };
+	},
+	getClassName: function() {
+	    return "AstKeyword";
 	}
     });
 
@@ -62,6 +68,9 @@ AstString = new JS.Class({
 	},
 	toString: function() {
 	    return "\"" + this._value + "\"";
+	},
+	getClassName: function() {
+	    return "AstString";
 	}
     });
 
@@ -82,5 +91,8 @@ AstInteger = new JS.Class({
 	},
 	toString: function() {
 	    return this._value;
+	},
+	getClassName: function() {
+	    return "AstInteger";
 	}
     });

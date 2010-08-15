@@ -60,6 +60,9 @@ PersistentList = new JS.Class({
 	    var str = "";
 	    this.dolist(function(e) { str += e.toString() + " "; });
 	    return "(" + (str.length > 1 ? str.slice(0, (str.length - 1)) : str) + ")";
+	},
+	getClassName: function() {
+	    return "PersistentList";
 	}
     });
 
