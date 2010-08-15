@@ -1,0 +1,11 @@
+Very early days lisp implementation for node.js. Requires node to be installed.
+
+Run REPL:
+
+node lisp/lisp.js --repl
+
+(in the folder containing the lisp/ and js-class/ folders)
+
+Run tests:
+
+node lisp/lisp.js lisp/test.ljs
