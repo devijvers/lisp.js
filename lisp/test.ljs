@@ -21,3 +21,6 @@
 (assert (= "(1 2 3)" (.toString '(1 2 3))))
 (assert ((:startsWith "TEST") "T"))
 (assert ((:startsWith (.toLowerCase "TEST")) "t"))
+(assert (= (.toLowerCase (.toUpperCase "test")) "test"))
+(assert ((:startsWith (.toLowerCase (.toUpperCase "test"))) "t"))
+(assert (= 4 (:length "test")))

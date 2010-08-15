@@ -64,6 +64,8 @@ JS.require("parser", "PersistentList", "AstSymbol", "AstKeyword", "AstString", "
 	// traverse user code again and replace macro calls with macro AST replacing variables inside macros with AST elements
 	// finally, evaluate AST since at this point AST should be macro-free (OK)
 
+	// def, vector(!), fn
+
 	var handle_if = function(source, dispatch, cond, then, _else) {
 	    var cond_fn = dispatch(source, dispatch, cond);
 	    var cond_val = (typeof(cond_fn) == "function" ? cond_fn.apply(this, []) : cond_fn);

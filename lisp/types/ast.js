@@ -37,10 +37,10 @@ AstKeyword = new JS.Class({
 	    return this._name;
 	},
 	get: function(o) {
-	    var fn = o[this._name];
 	    var this_name = this._name;
 	    return function() {
-		return fn.apply(o, arguments);
+		var fn = o[this_name];
+		return (typeof(fn) == "function" ? fn.apply(o, arguments) : fn);
 	    };
 	}
     });
